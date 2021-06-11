@@ -18,3 +18,4 @@
 * Source: https://openlayers.org/en/latest/apidoc/module-ol_source_Source-Source.html
 
 ### Project Simplified Diagram
+![alt text](https://github.com/faselm/mooc-openlayers-project/blob/main/diagrams/diagram-2.10.png "Diagram")
