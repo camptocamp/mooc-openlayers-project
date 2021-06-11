@@ -54,7 +54,7 @@ let overviewLayer = new TileLayer({
   })
 })
 
-let wmsLayer = new TileLayer({
+let earthquakeFrequencyLayer = new TileLayer({
   source: new TileWMS({
     url: 'https://sedac.ciesin.columbia.edu/geoserver/wms',
     params: {'LAYERS': 'ndh:ndh-earthquake-frequency-distribution', 'TILED': true},
@@ -134,7 +134,7 @@ const map = new Map({
   target: 'map',
   layers: [
     basemapLayer,
-    wmsLayer,
+    earthquakeFrequencyLayer,
     earthquakeLayer
   ],
   overlays: [
