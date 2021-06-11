@@ -9,9 +9,12 @@
 * Node.js: https://nodejs.org
 * Atom Editor: https://atom.io/
 
-## Concepts seen during the course
+## Essential concepts seen during the course
 
-### API
-* Class Map: https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html
+### OpenLayers Classes
+* Map: https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html
+* View: https://openlayers.org/en/latest/apidoc/module-ol_View-View.html
+* Layer: https://openlayers.org/en/latest/apidoc/module-ol_layer_Layer-Layer.html
+* Source: https://openlayers.org/en/latest/apidoc/module-ol_source_Source-Source.html
 
-### Diagram
+### Project Simplified Diagram
