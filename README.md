@@ -1,1 +1,1 @@
-# mooc-openlayers-project
+# MOOC Openlayers
