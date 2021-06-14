@@ -6,14 +6,14 @@ Below are the instructions to get started with the development environment and t
 
 ### On Ubuntu, Debian, and related Linux distributions
 
-#### Install Node.js:
+- Install Node.js:
    ```
    sudo apt update
    sudo apt install nodejs
    sudo apt install npm
    ```
 
-#### Install Atom or any code editor of your choice:
+- Install Atom or any code editor of your choice:
    ```
    wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
    sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
@@ -21,18 +21,18 @@ Below are the instructions to get started with the development environment and t
    sudo apt-get install atom
    ```
 
-#### Create an empty directory for the project
+- Create an empty directory for the project
    ```
    mkdir my-project
    cd my-project
    ```
 
-#### In the newly created folder, initialize the Node.js project:
+- In the newly created folder, initialize the Node.js project:
    ```
    npm init
    ```
 
-#### Add the OpenLayers and Parcel packages to the application:
+- Add the OpenLayers and Parcel packages to the application:
    ```
    npm install ol
    npm install --save-dev parcel-bundler
@@ -42,20 +42,20 @@ You are ready to go.
 
 ### On Windows and others
 
-#### Install Node.js:
+- Install Node.js:
    Download the installer from [[here]](https://nodejs.org/en/download/)
 
-#### Install Atom or any code editor of your choice:
+- Install Atom or any code editor of your choice:
    Download the installer from [[here]](https://atom.io/)
 
-#### Create an empty directory for the project
+- Create an empty directory for the project
 
-#### In the newly created folder, initialize the Node.js project:
+- In the newly created folder, initialize the Node.js project:
    ```
    npm init
    ```
 
-#### Add the OpenLayers and Parcel packages to the application:
+- Add the OpenLayers and Parcel packages to the application:
    ```
    npm install ol
    npm install --save-dev parcel-bundler
