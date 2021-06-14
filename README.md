@@ -59,6 +59,18 @@ Below are the instructions to get started with the development environment and t
    npm install --save-dev parcel-bundler
    ```
 
+After these steps, you will create two files:
+- `index.html` containing the HTML, CSS and map container.
+- `index.js` containing the JavaScript code for your map.
+
+Once the code of these files will be written, you can test you code by running:
+   ```
+   npm start
+   ```
+
+in your project directory, and opening the URL [http://localhost:1234/](http://localhost:1234/) in your favorite browser.
+
+
 ## Essential concepts seen during the course
 
 ### OpenLayers Classes
