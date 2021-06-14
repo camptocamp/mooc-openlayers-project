@@ -6,14 +6,14 @@
 * Install Atom or any code editor of your choice
 * Create an empty directory for the project
 * In the newly created folder, initialize the Node.js project:
-
+```
 npm init
-
+```
 * Add the OpenLayers and Parcel packages to the application:
-
+```
 npm install ol
 npm install --save-dev parcel-bundler
-
+```
 You are ready to go.
 
 ## Essential concepts seen during the course
