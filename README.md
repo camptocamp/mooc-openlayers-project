@@ -2,6 +2,8 @@
 
 ## Get started with the project
 
+Below are the instructions to get started with the development environment and the project on Ubuntu, Windows and other OSs.
+
 ### On Ubuntu, Debian, and related Linux distributions
 
 #### Install Node.js:
@@ -19,18 +21,18 @@
    sudo apt-get install atom
    ```
 
-* Create an empty directory for the project
+#### Create an empty directory for the project
    ```
    mkdir my-project
    cd my-project
    ```
 
-* In the newly created folder, initialize the Node.js project:
+#### In the newly created folder, initialize the Node.js project:
    ```
    npm init
    ```
 
-* Add the OpenLayers and Parcel packages to the application:
+#### Add the OpenLayers and Parcel packages to the application:
    ```
    npm install ol
    npm install --save-dev parcel-bundler
@@ -40,20 +42,20 @@ You are ready to go.
 
 ### On Windows and others
 
-* Install Node.js:
-   * Download the installer from [[here]](https://nodejs.org/en/download/)
+#### Install Node.js:
+   Download the installer from [[here]](https://nodejs.org/en/download/)
 
-* Install Atom or any code editor of your choice:
-   * Download the installer from [[here]](https://atom.io/)
+#### Install Atom or any code editor of your choice:
+   Download the installer from [[here]](https://atom.io/)
 
-* Create an empty directory for the project
+#### Create an empty directory for the project
 
-* In the newly created folder, initialize the Node.js project:
+#### In the newly created folder, initialize the Node.js project:
    ```
    npm init
    ```
 
-* Add the OpenLayers and Parcel packages to the application:
+#### Add the OpenLayers and Parcel packages to the application:
    ```
    npm install ol
    npm install --save-dev parcel-bundler
