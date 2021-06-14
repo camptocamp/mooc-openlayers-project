@@ -2,7 +2,7 @@
 
 ## Get started with the project
 
-* Install Node.js:
+- Install Node.js:
   * On Ubuntu, Debian, and related Linux distributions:
       ```
       sudo apt update
@@ -10,8 +10,8 @@
       sudo apt install npm
       ```
   * On Windows and others:
-      - Download the installer from [[here]](https://nodejs.org/en/download/)
-* Install Atom or any code editor of your choice:
+      * Download the installer from [[here]](https://nodejs.org/en/download/)
+- Install Atom or any code editor of your choice:
    * On Ubuntu, Debian, and related Linux distributions:
       ```
       wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
@@ -20,7 +20,7 @@
       sudo apt-get install atom
       ```
    * On Windows and others:
-      - Download the installer from [[here]](https://atom.io/)
+      * Download the installer from [[here]](https://atom.io/)
 * Create an empty directory for the project
 * In the newly created folder, initialize the Node.js project:
    ```
