@@ -2,47 +2,63 @@
 
 ## Get started with the project
 
-- Install Node.js:
+### On Ubuntu, Debian, and related Linux distributions
 
-  * On Ubuntu, Debian, and related Linux distributions:
+* Install Node.js:
+   ```
+   sudo apt update
+   sudo apt install nodejs
+   sudo apt install npm
+   ```
 
-      ```
-      sudo apt update
-      sudo apt install nodejs
-      sudo apt install npm
-      ```
-
-  * On Windows and others:
-      * Download the installer from [[here]](https://nodejs.org/en/download/)
-
-- Install Atom or any code editor of your choice:
-
-   * On Ubuntu, Debian, and related Linux distributions:
-
-      ```
-      wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-      sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-      sudo apt-get update
-      sudo apt-get install atom
-      ```
-
-   * On Windows and others:
-      * Download the installer from [[here]](https://atom.io/)
+* Install Atom or any code editor of your choice:
+   ```
+   wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+   sudo apt-get update
+   sudo apt-get install atom
+   ```
 
 * Create an empty directory for the project
+   ```
+   mkdir my-project
+   cd my-project
+   ```
 
 * In the newly created folder, initialize the Node.js project:
-
    ```
    npm init
    ```
 
 * Add the OpenLayers and Parcel packages to the application:
-
    ```
    npm install ol
    npm install --save-dev parcel-bundler
    ```
+
+You are ready to go.
+
+### On Windows and others
+
+* Install Node.js:
+   * Download the installer from [[here]](https://nodejs.org/en/download/)
+
+* Install Atom or any code editor of your choice:
+   * Download the installer from [[here]](https://atom.io/)
+
+* Create an empty directory for the project
+
+* In the newly created folder, initialize the Node.js project:
+   ```
+   npm init
+   ```
+
+* Add the OpenLayers and Parcel packages to the application:
+   ```
+   npm install ol
+   npm install --save-dev parcel-bundler
+   ```
+
 You are ready to go.
 
 ## Essential concepts seen during the course
