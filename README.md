@@ -40,13 +40,11 @@ Below are the instructions to get started with the development environment and t
 
 ### On Windows and other OSs
 
-- Install Node.js:
-   Download the installer from [[here]](https://nodejs.org/en/download/)
+- Install Node.js: download the installer from [[here]](https://nodejs.org/en/download/)
 
-- Install Atom or any code editor of your choice:
-   Download the installer from [[here]](https://atom.io/)
+- Install Atom or any code editor of your choice: download the installer from [[here]](https://atom.io/)
 
-- Create an empty directory for the project
+- Create an empty directory for the project.
 
 - In the newly created folder, initialize the Node.js project:
    ```
@@ -59,11 +57,13 @@ Below are the instructions to get started with the development environment and t
    npm install --save-dev parcel-bundler
    ```
 
-After these steps, you will create two files:
-- `index.html` containing the HTML, CSS and map container.
+### After the installation
+
+After having followed the above steps, you will create two files:
+- `index.html` containing the HTML code, CSS styles, and the map container;
 - `index.js` containing the JavaScript code for your map.
 
-Once the code of these files will be written, you can test you code by running:
+Once some code has been written in these files, you will be able to test you code by running:
    ```
    npm start
    ```
