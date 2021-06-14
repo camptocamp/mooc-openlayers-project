@@ -4,14 +4,14 @@
 
 ### On Ubuntu, Debian, and related Linux distributions
 
-* Install Node.js:
+#### Install Node.js:
    ```
    sudo apt update
    sudo apt install nodejs
    sudo apt install npm
    ```
 
-* Install Atom or any code editor of your choice:
+#### Install Atom or any code editor of your choice:
    ```
    wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
    sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
