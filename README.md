@@ -38,7 +38,7 @@ Below are the instructions to get started with the development environment and t
    npm install --save-dev parcel-bundler
    ```
 
-### On Windows and others
+### On Windows and other OSs
 
 - Install Node.js:
    Download the installer from [[here]](https://nodejs.org/en/download/)
