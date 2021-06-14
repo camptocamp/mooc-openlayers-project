@@ -38,8 +38,6 @@ Below are the instructions to get started with the development environment and t
    npm install --save-dev parcel-bundler
    ```
 
-You are ready to go.
-
 ### On Windows and others
 
 - Install Node.js:
@@ -60,8 +58,6 @@ You are ready to go.
    npm install ol
    npm install --save-dev parcel-bundler
    ```
-
-You are ready to go.
 
 ## Essential concepts seen during the course
 
