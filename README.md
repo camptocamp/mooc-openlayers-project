@@ -68,7 +68,7 @@ Once some code has been written in these files, you will be able to test you cod
    npm start
    ```
 
-in your project directory, and opening the URL [http://localhost:1234/](http://localhost:1234/) in your favorite browser.
+in your project directory. You can now test your web mapping application opening the URL [http://localhost:1234/](http://localhost:1234/) in your favorite browser.
 
 
 ## Essential concepts seen during the course
@@ -79,10 +79,13 @@ in your project directory, and opening the URL [http://localhost:1234/](http://l
 * Layer: https://openlayers.org/en/latest/apidoc/module-ol_layer_Layer-Layer.html
 * Source: https://openlayers.org/en/latest/apidoc/module-ol_source_Source-Source.html
 
-### Project Simplified Diagram
+### Project Diagram
+
+This diagram represent the various classes and attributes used in the project as well as their interrelations:
+
 ![alt text](https://github.com/faselm/mooc-openlayers-project/blob/main/diagrams/diagram-2.10.png "Diagram")
 
-## Resources
+## Web Resources
 * OpenLayers Homepage: https://openlayers.org
 * OpenLayers API: https://openlayers.org/en/latest/apidoc/
 * OpenLayers Examples: https://openlayers.org/en/latest/examples/
