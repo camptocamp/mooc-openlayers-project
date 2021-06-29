@@ -13,7 +13,7 @@ import Overlay from 'ol/Overlay';
 let popupContainer = document.getElementById('popup');
 let popupContent = document.getElementById('popup-content');
 
-let overlay = new Overlay({
+let popupOverlay = new Overlay({
   element: popupContainer,
   autoPan: true,
   autoPanAnimation: {
@@ -117,7 +117,7 @@ const map = new Map({
     earthquakeLayer
   ],
   overlays: [
-    overlay
+    popupOverlay
   ],
   view: new View({
     center: [0, 0],
@@ -143,12 +143,12 @@ map.on('pointermove', function(e) {
     return true;
   });
   if (selected) {
-    overlay.setPosition(coordinate);
+    popupOverlay.setPosition(coordinate);
     popupContent.innerHTML = '<table><tr><td>Magnitude:</td><td>' + selected.get('mag') + '</td></tr>' +
                              '<tr><td>Location:</td><td>' + selected.get('place') + '</td></tr>' +
                              '<tr><td>Depth:</td><td>' + selected.get('depth') + '</td></tr></table>'
   } else {
-    overlay.setPosition(undefined);
+    popupOverlay.setPosition(undefined);
   }
   map.getTargetElement().style.cursor = selected ? 'pointer' : '';
 });

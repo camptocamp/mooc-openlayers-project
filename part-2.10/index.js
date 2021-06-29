@@ -17,7 +17,7 @@ import {transform} from 'ol/proj';
 let popupContainer = document.getElementById('popup');
 let popupContent = document.getElementById('popup-content');
 
-let overlay = new Overlay({
+let popupOverlay = new Overlay({
   element: popupContainer,
   autoPan: true,
   autoPanAnimation: {
@@ -107,7 +107,7 @@ const map = new Map({
     earthquakeLayer
   ],
   overlays: [
-    overlay
+    popupOverlay
   ],
   view: new View({
     center: [0, 0],
@@ -132,7 +132,7 @@ map.on('pointermove', function(e) {
     return true;
   });
   if (selected) {
-    overlay.setPosition(click_coordinate);
+    popupOverlay.setPosition(click_coordinate);
     if (typeof selected.get('mag') !== 'undefined') {
       // Show earthquake info
       popupContent.innerHTML = '<table><tr><td>Magnitude:</td><td>' + selected.get('mag') + '</td></tr>' +
@@ -144,7 +144,7 @@ map.on('pointermove', function(e) {
     }
   } else {
     // Do not show popup content
-    overlay.setPosition(undefined);
+    popupOverlay.setPosition(undefined);
   }
 });
 
