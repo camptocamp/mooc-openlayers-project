@@ -148,7 +148,7 @@ map.on('click', function(e) {
   }
 });
 
-var geolocation = new Geolocation({
+let geolocation = new Geolocation({
   trackingOptions: {
     enableHighAccuracy: true,
   },

@@ -148,7 +148,7 @@ map.on('pointermove', function(e) {
   }
 });
 
-var geolocation = new Geolocation({
+let geolocation = new Geolocation({
   trackingOptions: {
     enableHighAccuracy: true,
   },
@@ -191,3 +191,17 @@ positionLayer = new VectorLayer({
     ],
   }),
 });
+
+function expng() {
+  map.once('postcompose', function(event) {
+    let canvas = event.context.canvas;
+    if (navigator.msSaveBlob) {
+      navigator.msSaveBlob(canvas.msToBlob(), 'map.png');
+    } else {
+      canvas.toBlob(function(blob) {
+        saveAs(blob, 'map.png');
+      });
+    }
+  });
+  map.renderSync();
+}

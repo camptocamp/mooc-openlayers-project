@@ -20,7 +20,7 @@ proj4.defs(
 );
 register(proj4);
 
-var myProjection = new Projection({
+let myProjection = new Projection({
   code: 'ESRI:53009',
   extent: [
     -18019909.21177587,

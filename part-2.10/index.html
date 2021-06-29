@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>OpenLayers Project</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script>
@@ -73,20 +72,5 @@
     </div>
     <script src="./index.js"></script>
     <button onclick="expng()">Export PDF</button>
-    <script>
-      function expng() {
-        map.once('postcompose', function(event) {
-          var canvas = event.context.canvas;
-          if (navigator.msSaveBlob) {
-            navigator.msSaveBlob(canvas.msToBlob(), 'map.png');
-          } else {
-            canvas.toBlob(function(blob) {
-              saveAs(blob, 'map.png');
-            });
-          }
-        });
-        map.renderSync();
-      }
-    </script>
   </body>
 </html>
