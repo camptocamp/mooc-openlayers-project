@@ -121,7 +121,7 @@ const map = new Map({
 
 let selected = null;
 
-map.on('pointermove', function(e) {
+map.on('click', function(e) {
   let click_coordinate = e.coordinate;
   let gps_coordinate = transform(geolocation.getPosition(), 'EPSG:3857', 'EPSG:4326');
   if (selected) {
@@ -192,16 +192,36 @@ positionLayer = new VectorLayer({
   }),
 });
 
-function expng() {
-  map.once('postcompose', function(event) {
-    let canvas = event.context.canvas;
+document.getElementById('export-png').addEventListener('click', function () {
+  map.once('rendercomplete', function () {
+    let mapCanvas = document.createElement('canvas');
+    let size = map.getSize();
+    mapCanvas.width = size[0];
+    mapCanvas.height = size[1];
+    let mapContext = mapCanvas.getContext('2d');
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.ol-layer canvas'),
+      function (canvas) {
+        if (canvas.width > 0) {
+          let opacity = canvas.parentNode.style.opacity;
+          mapContext.globalAlpha = opacity === '' ? 1 : Number(opacity);
+          let transform = canvas.style.transform;
+          let matrix = transform
+            .match(/^matrix\(([^\(]*)\)$/)[1]
+            .split(',')
+            .map(Number);
+          CanvasRenderingContext2D.prototype.setTransform.apply(mapContext, matrix);
+          mapContext.drawImage(canvas, 0, 0);
+        }
+      }
+    );
     if (navigator.msSaveBlob) {
-      navigator.msSaveBlob(canvas.msToBlob(), 'map.png');
+      navigator.msSaveBlob(mapCanvas.msToBlob(), 'map.png');
     } else {
-      canvas.toBlob(function(blob) {
-        saveAs(blob, 'map.png');
-      });
+      let link = document.getElementById('image-download');
+      link.href = mapCanvas.toDataURL();
+      link.click();
     }
   });
   map.renderSync();
-}
+});
