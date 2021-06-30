@@ -36,6 +36,7 @@ let earthquakeFrequencyLayer = new TileLayer({
     url: 'https://sedac.ciesin.columbia.edu/geoserver/wms',
     params: {'LAYERS': 'ndh:ndh-earthquake-frequency-distribution', 'TILED': true},
     transition: 0,
+    crossOrigin: "anonymous"
   }),
 })
 
