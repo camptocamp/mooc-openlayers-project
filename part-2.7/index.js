@@ -145,8 +145,7 @@ map.on('pointermove', function(e) {
   if (selected) {
     popupOverlay.setPosition(coordinate);
     popupContent.innerHTML = '<table><tr><td>Magnitude:</td><td>' + selected.get('mag') + '</td></tr>' +
-                             '<tr><td>Location:</td><td>' + selected.get('place') + '</td></tr>' +
-                             '<tr><td>Depth:</td><td>' + selected.get('depth') + '</td></tr></table>'
+                             '<tr><td>Location:</td><td>' + selected.get('place') + '</td></tr>'</table>'
   } else {
     popupOverlay.setPosition(undefined);
   }
