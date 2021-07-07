@@ -28,13 +28,8 @@ register(proj4);
 
 let myProjection = new Projection({
   code: "ESRI:53009",
-  extent: [
-    -18019909.21177587,
-    -9009954.605703328,
-    18019909.21177587,
-    9009954.605703328,
-  ],
-  worldExtent: [-179, -89.99, 179, 89.99],
+  extent: [-18000000, -9000000, 18000000, 9000000],
+  worldExtent: [-180, -90, 180, 90],
 });
 
 let popupContainer = document.getElementById("popup");
@@ -119,7 +114,7 @@ let overviewMapControl = new OverviewMap({
 });
 
 let zoomToExtentControl = new ZoomToExtent({
-  extent: [-15000000, -24000000, 15000000, 29000000],
+  extent: [-18000000, -9000000, 18000000, 9000000],
 });
 
 function scaleControl() {
@@ -140,10 +135,10 @@ const map = new Map({
   view: new View({
     projection: myProjection,
     center: [0, 0],
-    zoom: 0,
+    zoom: 2,
   }),
   controls: defaultControls({
-    attributionOptions: { collapsible: true },
+    "attributionOptions": { "collapsible": true },
   }).extend([overviewMapControl, zoomToExtentControl, scaleControl()]),
 });
 
