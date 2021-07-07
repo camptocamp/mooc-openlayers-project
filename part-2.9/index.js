@@ -148,10 +148,10 @@ map.on("click", function (e) {
       // Show geolocation info
       popupContent.innerHTML =
         "<table><tr><td>Lon:</td><td>" +
-        gps_coordinate[0] +
+        gps_coordinate[0].toFixed(5) +
         "</td></tr>" +
         "<tr><td>Lat:</td><td>" +
-        gps_coordinate[1] +
+        gps_coordinate[1].toFixed(5) +
         "</td></tr></table>";
     }
   } else {
