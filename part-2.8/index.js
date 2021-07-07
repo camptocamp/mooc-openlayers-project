@@ -138,7 +138,7 @@ const map = new Map({
     zoom: 2,
   }),
   controls: defaultControls({
-    "attributionOptions": { "collapsible": true },
+    attributionOptions: { collapsible: true },
   }).extend([overviewMapControl, zoomToExtentControl, scaleControl()]),
 });
 
