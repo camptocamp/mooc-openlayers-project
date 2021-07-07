@@ -29,13 +29,8 @@ let overviewMapControl = new OverviewMap({
 });
 
 let zoomToExtentControl = new ZoomToExtent({
-  extent: [
-    // ESPG:3857
-    -15000000,
-    -24000000,
-    15000000,
-    29000000,
-  ],
+  // ESPG:3857
+  extent: [-15000000, -24000000, 15000000, 29000000],
 });
 
 function getScaleControl() {
