@@ -46,7 +46,7 @@ Below are the instructions to get started with the development environment and t
 
 - Create an empty directory for the project.
 
-- In the newly created folder, initialize the Node.js project:
+- In the newly created folder, initialize the Node.js project using the command line:
    ```
    npm init
    ```
@@ -59,9 +59,9 @@ Below are the instructions to get started with the development environment and t
 
 ### After the installation
 
-After having followed the above steps, you will create two files:
+After having followed the above steps, create two files:
 - `index.html` containing the HTML code, CSS styles, and the map container;
-- `index.js` containing the JavaScript code for your map.
+- `index.js` containing the JavaScript code for your mapping application.
 
 Once some code has been written in these files, you will be able to test you code by running:
    ```
