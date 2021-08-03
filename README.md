@@ -7,7 +7,7 @@ Below are the instructions to get started with the development environment and t
 ### On Ubuntu, Debian, and related Linux distributions
 
 - Install Node.js:
-   ```bash
+   ```shell
    sudo apt update
    sudo apt install nodejs
    sudo apt install npm
