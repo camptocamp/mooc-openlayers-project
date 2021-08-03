@@ -63,10 +63,23 @@ After having followed the above steps, create two files:
 - `index.html` containing the HTML code, CSS styles, and the map container;
 - `index.js` containing the JavaScript code for your mapping application.
 
-Once some code has been written in these files, you will be able to test you code by running:
-   ```
-   npm start
-   ```
+You also have to add a start script in the `package.json` file (automatically created with `npm init` in the previous steps) to easily run your application with Parcel:
+
+```
+...
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "parcel index.html",
+  "build": "parcel build --public-url . index.html"
+},
+...
+```
+
+Once some code has been written in the `index.html` and `index.js` files, you will be able to test you code by running:
+
+```
+npm start
+```
 
 in your project directory. You can now test your web mapping application opening the URL [http://localhost:1234/](http://localhost:1234/) in your favorite browser.
 
