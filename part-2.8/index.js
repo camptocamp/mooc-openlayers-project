@@ -17,7 +17,6 @@ import {
 import Overlay from "ol/Overlay";
 import proj4 from "proj4";
 import { register } from "ol/proj/proj4";
-import { get as getProjection } from "ol/proj";
 import Projection from "ol/proj/Projection";
 
 proj4.defs(
@@ -29,7 +28,6 @@ register(proj4);
 let myProjection = new Projection({
   code: "ESRI:53009",
   extent: [-18000000, -9000000, 18000000, 9000000],
-  worldExtent: [-180, -90, 180, 90],
 });
 
 let popupContainer = document.getElementById("popup");
