@@ -14,6 +14,12 @@ import {
   ZoomToExtent,
   defaults as defaultControls,
 } from "ol/control";
+
+import {
+  PinchZoom,
+  defaults as defaultInteractions,
+} from 'ol/interaction';
+
 import Overlay from "ol/Overlay";
 import Geolocation from "ol/Geolocation";
 import Feature from "ol/Feature";
@@ -112,6 +118,7 @@ const map = new Map({
     center: [0, 0],
     zoom: 0,
   }),
+  interactions: defaultInteractions().extend([new PinchZoom()]),
   controls: defaultControls({
     attributionOptions: { collapsible: true },
   }).extend([zoomToExtentControl, scaleControl()]),
@@ -194,9 +201,9 @@ geolocation.on("change:position", function () {
   positionFeature.setGeometry(coordinates ? new Point(coordinates) : null);
 });
 
-positionLayer = new VectorLayer({
-  map: map,
+const positionLayer = new VectorLayer({
   source: new VectorSource({
     features: [accuracyFeature, positionFeature],
   }),
 });
+map.addLayer(positionLayer);

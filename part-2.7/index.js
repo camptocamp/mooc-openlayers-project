@@ -17,7 +17,6 @@ import {
 import Overlay from "ol/Overlay";
 
 let popupContainer = document.getElementById("popup");
-let popupContent = document.getElementById("popup-content");
 
 let popupOverlay = new Overlay({
   element: popupContainer,
@@ -126,6 +125,8 @@ const map = new Map({
 });
 
 let selected = null;
+
+let popupContent = document.getElementById("popup-content");
 
 map.on("pointermove", function (e) {
   let coordinate = e.coordinate;

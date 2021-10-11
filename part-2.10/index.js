@@ -205,10 +205,8 @@ document.getElementById("export-png").addEventListener("click", function () {
     map.once("rendercomplete", function () {
       let link = document.getElementById("image-download");
       let href = document.querySelectorAll(".ol-layer canvas")[0].toDataURL();
-      link.href = href
+      link.href = href;
       navigator.clipboard.writeText(href);
-
       link.click();
     });
-    map.renderSync();
 });
