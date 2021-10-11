@@ -202,38 +202,13 @@ let positionLayer = new VectorLayer({
 });
 
 document.getElementById("export-png").addEventListener("click", function () {
-  map.once("rendercomplete", function () {
-    let mapCanvas = document.createElement("canvas");
-    let size = map.getSize();
-    mapCanvas.width = size[0];
-    mapCanvas.height = size[1];
-    let mapContext = mapCanvas.getContext("2d");
-    Array.prototype.forEach.call(
-      document.querySelectorAll(".ol-layer canvas"),
-      function (canvas) {
-        if (canvas.width > 0) {
-          let opacity = canvas.parentNode.style.opacity;
-          mapContext.globalAlpha = opacity === "" ? 1 : Number(opacity);
-          let transform = canvas.style.transform;
-          let matrix = transform
-            .match(/^matrix\(([^\(]*)\)$/)[1]
-            .split(",")
-            .map(Number);
-          CanvasRenderingContext2D.prototype.setTransform.apply(
-            mapContext,
-            matrix
-          );
-          mapContext.drawImage(canvas, 0, 0);
-        }
-      }
-    );
-    if (navigator.msSaveBlob) {
-      navigator.msSaveBlob(mapCanvas.msToBlob(), "map.png");
-    } else {
+    map.once("rendercomplete", function () {
       let link = document.getElementById("image-download");
-      link.href = mapCanvas.toDataURL();
+      let href = document.querySelectorAll(".ol-layer canvas")[0].toDataURL();
+      link.href = href
+      navigator.clipboard.writeText(href);
+
       link.click();
-    }
-  });
-  map.renderSync();
+    });
+    map.renderSync();
 });
